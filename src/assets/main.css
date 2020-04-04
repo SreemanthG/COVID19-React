@@ -51,12 +51,18 @@ hr{
 .map path{
 fill: seashell;
 stroke: skyblue;
+transition: all 0.6s;
+transform-origin: 50% 50%;
 }
 
 .map path:hover{
+
+    cursor: pointer;
     fill: rgb(0, 255, 255);
-    stroke: darkblue;
-    stroke-width: 4px;
+    stroke: rgb(28, 28, 29);
+    stroke-width: 6px;
+    transform: scale(1);
+    text-shadow: 2px 2px 5px red;
 }
 
 

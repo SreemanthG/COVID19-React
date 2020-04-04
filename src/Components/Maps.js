@@ -7,11 +7,11 @@ export default class Maps extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count:[],
+      count:[{ _id:"",name:"",confirmed:0,cured:0,death:0,total:0}],
       isMount:false,
       stateName: ""
     };
-
+    console.log(this.state)
     // this.check = this.check.bind( this);
     // this.hoverUpdate = this.hoverUpdate.bind(this);
 
@@ -36,26 +36,61 @@ export default class Maps extends React.Component {
 // }
 
 componentDidMount(){
-  // this.setState({stateName:this.props.name});
-  this.setState({stateName:this.props.name},()=>{
-    console.log(this.state)
-  });
-  axios.get('https://covid19-india-adhikansh.herokuapp.com/state/'+this.state.stateName).then(res=>{
+  
+  // this.setState({stateName:this.props.name} );
+  console.log(this.props.name)
+  axios.get('https://covid19-india-adhikansh.herokuapp.com/state/'+this.props.name).then(res=>{
+    // console.log(res)
+  
+  if(!res.data.data[0]){
+    console.log("nod")
+    this.setState({
+      count:[{ _id:"",name:this.props.name,confirmed:0,cured:0,death:0,total:0}],
+      stateName : this.props.name
+    });
+    console.log(this.state.count)
+
+  } else{
+    console.log("data")
     this.setState({count : res.data.data,stateName : this.props.name});
-console.log(this.state)
+    console.log(this.state.count)
+  }
 })
 }
 
 componentDidUpdate(prevProps, prevState){
-  // if(this.state.count){
-  axios.get('https://covid19-india-adhikansh.herokuapp.com/state/'+this.state.stateName).then(res=>{
-    this.setState({count : res.data.data,stateName : this.props.name});
-    console.log(this.state.count)
-})
-  // }
+
+  
 }
+UNSAFE_componentWillReceiveProps(nextProps){
+  console.log(nextProps)
+  if(nextProps.name!==this.props.name){
 
+  axios.get('https://covid19-india-adhikansh.herokuapp.com/state/'+nextProps.name).then(res=>{
+    // console.log(res)
+  
+  if(!res.data.data[0]){
+    console.log("nod")
+    this.setState({
+      count:[{ _id:"",name:this.props.name,confirmed:0,cured:0,death:0,total:0}],
+      stateName: nextProps.name
+    });
+    console.log(this.state)
 
+  } else{
+    console.log("data")
+    this.setState({count : res.data.data,stateName : nextProps.name});
+    console.log(this.state)
+  }
+})
+  }
+}
+// static getDerivedStateFromProps(nextProps, prevState) {
+//   if (nextProps.name !== prevState.total) {
+//     return ({ total: nextProps.total }) // <- this is setState equivalent
+//   }
+ 
+// }
 render(){
   return(
     <div>
@@ -66,19 +101,19 @@ render(){
      <div className="card1" id="test">
            <div  className="stats1 c1col">
                <span>Confirmed</span>
-               <span id="confirmed">{this.state.stateName}</span>
+               <span id="confirmed">{this.state.count[0].total ?this.state.count[0].total:<span>-</span>}</span>
            </div>
            <div  className="stats1 c2col">
                <span>Active</span>
-               <span id="active">{this.state.stateName}</span>
+               <span id="active">{this.state.count[0].total ?this.state.count[0].confirmed:<span>-</span>}</span>
            </div>
            <div  className="stats1 c3col">
                <span>Recovered</span>
-               <span id="recovered">{this.state.stateName}</span>
+               <span id="recovered">{this.state.count[0].total ?this.state.count[0].cured:<span>-</span>}</span>
            </div>
            <div  className="stats1 c4col">
                <span>Deceased</span>
-               <span id="deceased">{this.state.stateName}</span>
+               <span id="deceased">{this.state.count[0].total ?this.state.count[0].death:<span>-</span>}</span>
            </div>
        </div>
        </div>

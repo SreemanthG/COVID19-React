@@ -23,7 +23,8 @@ window.onscroll = (event) => {
         navtog.style.backgroundColor="black"
         navlink.forEach(function(nava){
             nava.style.color= "black";  
-        })      
+        })
+        nav.style.height="60px"      
     }  
   };
 
