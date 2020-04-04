@@ -14,6 +14,7 @@ export default class Tableitem extends React.Component {
     } 
 
     render(){
+        
         return<tbody>{this.state.items.map(tableitem => (<tr><td>{tableitem.name}</td><td>{tableitem.confirmed}</td><td>{tableitem.cured}</td><td>{tableitem.death}</td><td>{tableitem.total}</td></tr>))}</tbody>
         
     }

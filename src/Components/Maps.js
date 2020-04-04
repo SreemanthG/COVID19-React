@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-
+// import Fade from 'react-reveal/Fade';
 
 export default class Maps extends React.Component {
 
@@ -94,6 +94,7 @@ UNSAFE_componentWillReceiveProps(nextProps){
 render(){
   return(
     <div>
+      {/* <Fade> */}
     <ul>
     {this.state.stateName ? <p>StateName: {this.state.stateName}</p>: <p>Hover over the state</p>}
     </ul>
@@ -116,6 +117,7 @@ render(){
                <span id="deceased">{this.state.count[0].total ?this.state.count[0].death:<span>-</span>}</span>
            </div>
        </div>
+       {/* </Fade> */}
        </div>
   )
 }
