@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {Pie} from 'react-chartjs-2';
+import {Doughnut,Bar} from 'react-chartjs-2';
 
 export default class Tableitem extends React.Component {
 
@@ -29,15 +29,29 @@ export default class Tableitem extends React.Component {
         
         return(
             <div>
-                {/* <h1>Summary Chart</h1> */}
-                <Pie 
+              <div className="row">
+        <div className="col-md-6">
+        <Doughnut
                 data={{
                     labels:this.state.labels,
                     datasets:this.state.datasets
                 }}
-                height="90%"
+                
                 />
-                <br/>
+        </div>
+        <div className="col-md-6">
+        <Bar
+                data={{
+                    labels:this.state.labels,
+                    datasets:this.state.datasets
+                }}
+                
+                />
+        </div>
+    </div> 
+             
+                
+                
             </div>
         )
         
