@@ -10,6 +10,8 @@ window.onscroll = (event) => {
     
     const nav = document.querySelector('.navbar');
     const navlink = document.querySelectorAll('.navbar a');
+    const navitem = document.querySelectorAll('.navbar nav-item');
+
     const navtog = document.querySelector('.navbar-toggler');
     if(window.scrollY <= 80){
         nav.style.backgroundColor= "transparent";
@@ -17,14 +19,21 @@ window.onscroll = (event) => {
         navlink.forEach(function(nava){
             nava.style.color= "white";  
         })
+
+        // navlink.forEach(function(nava){
+        //     nava.style.backgroundcolor= "transparent";  
+        // })
     } 
     else{
         nav.style.backgroundColor= "#F4F5FD"; 
         navtog.style.backgroundColor="black"
+        // navitem.forEach(function(nava){
+        //     nava.style.backgroundColor= "#F4F5FD";  
+        // })
         navlink.forEach(function(nava){
             nava.style.color= "black";  
         })
-        nav.style.height="60px"      
+
     }  
   };
 

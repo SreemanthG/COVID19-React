@@ -41,8 +41,9 @@ function App() {
     <div className="App">
       {/* <Fade > */}
       {/* this.hoverUpdate(this) */}
+      <meta name="viewport" content="width=device-width, user-scalable=yes"></meta>
         {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> */}
-      <nav className="navbar scroll navbar-dark fixed-top navbar-expand-lg">
+      <nav className="navbar scroll fixed-top navbar-dark  navbar-expand-lg">
         <div className="container">
             <a className="navbar-brand" href="#" style={{fontWeight: '900'}}>COVID-19</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,7 +134,7 @@ function App() {
                           <thead>
                             <tr>
                               <th scope="col">State Name</th>
-                              <th scope="col">Confirmed</th>
+                              <th scope="col">First</th>
                               <th scope="col">Cured</th>
                               <th scope="col">Death</th>
                               <th scope="col">Total</th>
