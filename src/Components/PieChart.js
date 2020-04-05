@@ -11,7 +11,8 @@ export default class Tableitem extends React.Component {
           datasets: [{
               data: [],
               backgroundColor: []
-          }] 
+          }],
+          total: "" 
         };
         console.log(this.state)
         // this.check = this.check.bind( this);
@@ -20,7 +21,7 @@ export default class Tableitem extends React.Component {
       }
     componentDidMount(){
         axios.get('https://covid19-india-adhikansh.herokuapp.com/summary').then(res=>{
-            this.setState({datasets:[{data:[res.data["Total Confirmed cases"],res.data["Death"],res.data["Cured/Discharged/Migrated"]],backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"]}]});
+            this.setState({datasets:[{data:[res.data["Total Confirmed cases"],res.data["Death"],res.data["Cured/Discharged/Migrated"]],backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"]}],total:res.data["Total Cases"]});
             console.log(this.setState);
         });
     } 
@@ -29,7 +30,9 @@ export default class Tableitem extends React.Component {
         
         return(
             <div>
+                <p>Total no. of cases: <h2>{this.state.total}</h2></p>
               <div className="row">
+        
         <div className="col-md-6">
         <Doughnut
                 data={{
@@ -42,10 +45,23 @@ export default class Tableitem extends React.Component {
         <div className="col-md-6">
         <Bar 
                 data={{
+                    label:this.state.labels,
                     labels:this.state.labels,
                     datasets:this.state.datasets
-                }}
-                
+                }} 
+                options={ {
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        callbacks: {
+                           label: function(tooltipItem) {
+                                  return tooltipItem.yLabel;
+                           }
+                        }
+                    }
+                }
+            }
                 />
         </div>
     </div> 

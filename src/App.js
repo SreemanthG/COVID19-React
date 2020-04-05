@@ -81,7 +81,7 @@ function App() {
                     <div className="col-md-12 home">
                       
                         <h1>COVID -19</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel exercitationem quis modi et culpa, commodi tempore voluptatibus ipsam molestiae eum, excepturi harum nemo fugiat porro possimus deserunt in numquam ea!</p>
+                        <p>During the present novel coronavirus (COVID-19) pandemic, those on the front lines-including health care professionals, researchers, and government experts-need quick, easy access to real-time critical data. So SIAM VIT create a website for easily visualization the Data.</p>
                         <a className="btn btn-light btn-lg" id="get-started" href="#symptoms">Get Started! <i className="fa fa-chevron-down" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -128,13 +128,13 @@ function App() {
             <div className="row">
                 <div className="col-md-12">
                     
-                    <div className="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div className="table-wrapper-scroll-y table-responsive-lg my-custom-scrollbar">
 
                         <table className="table table-bordered table-striped mb-0">
                           <thead>
                             <tr>
                               <th scope="col">State Name</th>
-                              <th scope="col">First</th>
+                              <th scope="col">Confirmed</th>
                               <th scope="col">Cured</th>
                               <th scope="col">Death</th>
                               <th scope="col">Total</th>
@@ -142,135 +142,7 @@ function App() {
                           </thead>
                           
                           <Table/>
-                            {/* <tr>
-                              <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">4</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">5</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">6</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">6</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">6</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">4</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">5</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">6</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                          </tbody> */}
+                           
                         </table>
                     </div>
                    
@@ -282,16 +154,16 @@ function App() {
 
 <div className="cormap" id="maps">
                         <h2>Map View</h2>
-    <p>Hover over the map to get the status </p>
+    <p><strong>Click on</strong> the map to get the status </p>
     
     {/* <div id="test"> */}
       {/* <p>Hello World</p>
     </div> */}
-  
+  <div className="row">
     <div className="col-md-12">
       {/* <Maps> */}
       <div id="test">
-      <div className="card1" id="test">
+      <div className="card1 " id="">
             <div  className="stats1 c1col">
                 <span>Confirmed</span>
                 <span id="confirmed"> </span>
@@ -400,6 +272,7 @@ function App() {
 
     
     </div>
+  </div>
 </div>
 <hr/>
 
@@ -530,7 +403,7 @@ function App() {
   
 
     <div className="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://SIAMVIT.IN/"> SIAMVIT.in</a>
+      <a className="hoveric"href="https://SIAMVIT.IN/"> SIAMVIT</a>
     </div>
 
   
