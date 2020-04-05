@@ -81,7 +81,7 @@ function App() {
                     <div className="col-md-12 home">
                       
                         <h1>COVID -19</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel exercitationem quis modi et culpa, commodi tempore voluptatibus ipsam molestiae eum, excepturi harum nemo fugiat porro possimus deserunt in numquam ea!</p>
+                        <p>During the present novel coronavirus (COVID-19) pandemic, those on the front lines-including health care professionals, researchers, and government experts-need quick, easy access to real-time critical data.So SIAM VIT create a website for easily visualized the Data.</p>
                         <a className="btn btn-light btn-lg" id="get-started" href="#symptoms">Get Started! <i className="fa fa-chevron-down" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ function App() {
                           <thead>
                             <tr>
                               <th scope="col">State Name</th>
-                              <th scope="col">First</th>
+                              <th scope="col">Confirmed</th>
                               <th scope="col">Cured</th>
                               <th scope="col">Death</th>
                               <th scope="col">Total</th>
@@ -282,7 +282,7 @@ function App() {
 
 <div className="cormap" id="maps">
                         <h2>Map View</h2>
-    <p>Hover over the map to get the status </p>
+    <p>Click on the map to get the status </p>
     
     {/* <div id="test"> */}
       {/* <p>Hello World</p>
