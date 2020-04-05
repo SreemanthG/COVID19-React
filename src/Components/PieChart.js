@@ -40,7 +40,7 @@ export default class Tableitem extends React.Component {
                 />
         </div>
         <div className="col-md-6">
-        <Bar
+        <Bar 
                 data={{
                     labels:this.state.labels,
                     datasets:this.state.datasets

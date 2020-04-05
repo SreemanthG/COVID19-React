@@ -11,6 +11,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import fever from './assets/img/fever.png';
 import lungs from './assets/img/lungs.png';
 import cough from './assets/img/cough.png';
+import siam from './assets/img/siam.png';
 import ReactDOM from 'react-dom';
 import Fade from 'react-reveal/Fade';
 
@@ -132,7 +133,7 @@ function App() {
                           <thead>
                             <tr>
                               <th scope="col">State Name</th>
-                              <th scope="col">First</th>
+                              <th scope="col">Confirmed</th>
                               <th scope="col">Cured</th>
                               <th scope="col">Death</th>
                               <th scope="col">Total</th>
@@ -426,58 +427,57 @@ function App() {
   
 
       <div className="row text-center d-flex justify-content-center pt-5 mb-3">
-
-        <div className="col-md-2 mb-3">
-          <h6 className="text-uppercase font-weight-bold">
-            <a href="#!">About us</a>
-          </h6>
-        </div>
-
-  
-
-        <div className="col-md-2 mb-3">
-          <h6 className="text-uppercase font-weight-bold">
-            <a href="#!">Products</a>
-          </h6>
-        </div>
+        {/* // <div className="col-md-2 mb-3">
+        //   <h6 className="text-uppercase font-weight-bold">
+        //     <a href="#!">About us</a>
+        //   </h6>
+        // </div>
 
   
 
-        <div className="col-md-2 mb-3">
-          <h6 className="text-uppercase font-weight-bold">
-            <a href="#!">Awards</a>
-          </h6>
-        </div>
+        // <div className="col-md-2 mb-3">
+        //   <h6 className="text-uppercase font-weight-bold">
+        //     <a href="#!">Products</a>
+        //   </h6>
+        // </div>
 
   
 
-        <div className="col-md-2 mb-3">
-          <h6 className="text-uppercase font-weight-bold">
-            <a href="#!">Help</a>
-          </h6>
-        </div>
+        // <div className="col-md-2 mb-3">
+        //   <h6 className="text-uppercase font-weight-bold">
+        //     <a href="#!">Awards</a>
+        //   </h6>
+        // </div>
+
+  
+
+        // <div className="col-md-2 mb-3">
+        //   <h6 className="text-uppercase font-weight-bold">
+        //     <a href="#!">Help</a>
+        //   </h6>
+        // </div>
 
 
-        <div className="col-md-2 mb-3">
-          <h6 className="text-uppercase font-weight-bold">
-            <a href="#!">Contact</a>
-          </h6>
-        </div>
+        // <div className="col-md-2 mb-3">
+        //   <h6 className="text-uppercase font-weight-bold">
+        //     <a href="#!">Contact</a>
+        //   </h6>
+        // </div> */}
+      {/* <div className="container">
+      <hr style={{width:'75%'}}/>
 
+      </div> */}
   
       </div>
 
-      <hr className="rgba-white-light" style={{marginLeft:'15%'}}/>
-  
-
+      {/* <hr className="rgba-white-light" style={{marginLeft:'15%'}}/> */}
+      <a href="https://www.siamvit.in">
+      <img src={siam} className="img-fluid" alt="SIAMVIT" width="350px"/>
+      </a>
       <div className="row d-flex text-center justify-content-center mb-md-0 mb-4">
 
         <div className="col-md-8 col-12 mt-5">
-          <p style={{lineHeight:'1.7rem'}}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-            explicabo.
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+          <p style={{lineHeight:'1.7rem'}}>SIAM-VIT aims at dispensing the required tools and knowledge for students to excel in fields of applied mathematics such as computational science, forensics, cryptography etc. It provides a bridge for students to apply the classroom knowledge to real-world applications and push the boundaries of their curriculum to explore their field of interest through projects, research, industrial visits and internships. It is the only chapter in VIT that takes all the branches under its wings and therefore has a huge outreach.</p>
         </div>
   
       </div>
@@ -493,28 +493,28 @@ function App() {
           <div className="mb-5 flex-center">
   
 
-            <a className="fb-ic">
-              <i className="fab fa-facebook-f fa-lg white-text mr-4"> </i>
+            <a className="fb-ic hoveric" href="https://www.facebook.com/SIAMVIT">
+              <i className="fa fa-facebook-f fa-lg white-text mr-4"> </i>
             </a>
 
-            <a className="tw-ic">
-              <i className="fab fa-twitter fa-lg white-text mr-4"> </i>
+            {/* <a className="tw-ic hoveric">
+              <i className="fa fa-twitter fa-lg white-text mr-4"> </i>
+            </a> */}
+
+            {/* <a className="gplus-ic">
+              <i className="fa fa-google-plus fa-lg white-text mr-4"> </i>
+            </a> */}
+
+            <a className="li-ic hoveric" href="https://www.linkedin.com/company/siam-vit/">
+              <i className="fa fa-linkedin fa-lg white-text mr-4"> </i>
             </a>
 
-            <a className="gplus-ic">
-              <i className="fab fa-google-plus-g fa-lg white-text mr-4"> </i>
+            <a className="ins-ic hoveric" href="https://www.instagram.com/siamvit/">
+              <i className="fa fa-instagram fa-lg white-text mr-4"> </i>
             </a>
 
-            <a className="li-ic">
-              <i className="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
-            </a>
-
-            <a className="ins-ic">
-              <i className="fab fa-instagram fa-lg white-text mr-4"> </i>
-            </a>
-
-            <a className="pin-ic">
-              <i className="fab fa-pinterest fa-lg white-text"> </i>
+            <a className="pin-ic hoveric" href="https://github.com/siam-VIT/ ">
+              <i className="fa fa-github fa-lg white-text"> </i>
             </a>
   
           </div>
@@ -529,12 +529,12 @@ function App() {
   
 
     <div className="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      <a href="https://SIAMVIT.IN/"> SIAMVIT.in</a>
     </div>
 
   
   </footer>
-  <script src="https://unpkg.com/scrollreveal"></script>
+
   {/* </Fade> */}
 
    </div>

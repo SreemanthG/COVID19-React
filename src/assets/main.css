@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400&family=Open+Sans&family=Varela&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 body{
     font-family: "titillium web";
   text-align: center;  
 
 }
 .jumbo{
-    background-image:url(img/background.png);
+    background-image:url(img/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -135,7 +136,7 @@ footer a{
 }
 
 table{
-    font-family: "valera";
+    font-family: "varela";
 }
 .cortables{
     padding-top: 80px;
@@ -201,4 +202,8 @@ table{
     background-color: white;
     color: black;
     
+}
+.hoveric:hover{
+    color: black;
+
 }
