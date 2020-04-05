@@ -279,14 +279,7 @@ function App() {
 <div className="corgraph" id="graphs">
     <h1>Graphs</h1>
     <PieChart/>
-    {/* <div className="row">
-        <div className="col-md-6">
-            <canvas id="line-chart" width="800" height="450"></canvas>
-        </div>
-        <div className="col-md-6">
-            <canvas id="doughnut-chart" width="800" height="450"></canvas>
-        </div>
-    </div> */}
+    
 </div>
 
 
