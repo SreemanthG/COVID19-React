@@ -96,7 +96,7 @@ render(){
     <div>
       {/* <Fade> */}
     <ul>
-    {this.state.stateName ? <p>StateName: {this.state.stateName}</p>: <p>Hover over the state</p>}
+    {this.state.stateName ? <p>StateName: {this.state.stateName}</p>: <p><strong>Click</strong> on the state</p>}
     </ul>
 
      <div className="card1" id="test">
