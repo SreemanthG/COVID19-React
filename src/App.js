@@ -81,7 +81,9 @@ function App() {
                     <div className="col-md-12 home">
                       
                         <h1>COVID -19</h1>
-                        <p>During the present novel coronavirus (COVID-19) pandemic, those on the front lines-including health care professionals, researchers, and government experts-need quick, easy access to real-time critical data. So SIAM VIT create a website for easily visualization the Data.</p>
+
+                        <p>During the present novel coronavirus (COVID-19) pandemic, those on the front lines-including health care professionals, researchers, and government experts-need quick, easy access to real-time critical data.So SIAM VIT create a website for easily visualized the Data.</p>
+
                         <a className="btn btn-light btn-lg" id="get-started" href="#symptoms">Get Started! <i className="fa fa-chevron-down" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -154,7 +156,8 @@ function App() {
 
 <div className="cormap" id="maps">
                         <h2>Map View</h2>
-    <p><strong>Click on</strong> the map to get the status </p>
+<p><strong>Click on</strong> the map to get the status </p>
+
     
     {/* <div id="test"> */}
       {/* <p>Hello World</p>
